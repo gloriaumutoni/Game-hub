@@ -15,9 +15,7 @@ export default function App() {
       <Stack hideBelow="md">
         <GridItem area="aside">Aside</GridItem>
       </Stack>
-      <GridItem area="main" bg="pink.50">
-        Main
-      </GridItem>
+      <GridItem area="main">Main</GridItem>
     </Grid>
   );
 }
