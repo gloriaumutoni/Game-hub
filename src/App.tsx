@@ -1,4 +1,4 @@
-import { Grid, GridItem, useBreakpointValue } from "@chakra-ui/react";
+import { Grid, GridItem, Stack } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 
 export default function App() {
@@ -13,12 +13,12 @@ export default function App() {
         <GridItem area="nav" bg="red">
           <NavBar />
         </GridItem>
-        {useBreakpointValue({ base: false, lg: true }) && (
-          <GridItem area="aside" bg={`yellow`}>
+        <Stack hideBelow="md">
+          <GridItem area="aside" bg="yellow">
             Aside
           </GridItem>
-        )}
-        <GridItem area={`main`} bg={`pink.50`}>
+        </Stack>
+        <GridItem area="main" bg="pink.50">
           Main
         </GridItem>
       </Grid>
