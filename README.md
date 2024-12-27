@@ -31,9 +31,11 @@ Game Hub is a modern web application that allows users to explore, search, and s
 ## Installation and Setup 🚀
 
 1. **Clone repository**:
-   ```bash
+
+```bash
    git clone https://github.com/gloriaumutoni/Game-hub.git
-   ```
+```
+
 2. **Navigate through the repository**:
 
 ```bash
