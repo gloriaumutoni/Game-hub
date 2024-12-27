@@ -1,50 +1,53 @@
-# React + TypeScript + Vite
+# Game Hub 🎮
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Game Hub is a modern web application that allows users to explore, search, and sort games based on genres and other attributes. The app provides an intuitive user interface and responsive design, making it easy to navigate and discover games. Built with React, Vite, and Chakra UI, it ensures fast performance and great user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features ✨
 
-## Expanding the ESLint configuration
+- **Search Games**: Find your favorite games using the search functionality.
+- **Sort Games**: Sort games based on attributes like rating, release date, or popularity.
+- **Explore Genres**: Browse games by different genres such as RPG, Action, Puzzle, and more.
+- **Theme Toggle**: Switch between light and dark modes for a personalized experience.
+- **Responsive Design**: Seamlessly access the app on any device.
+- **Fast Performance**: Powered by Vite for lightning-fast builds and Chakra UI for styling.
+- **Error Handling**: Graceful error states when fetching or rendering fails.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack 🛠️
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **React**: For building the user interface.
+- **Vite**: For fast development and optimized builds.
+- **Chakra UI**: For accessible, responsive, and customizable UI components.
+- **ESLint**: For linting and maintaining code quality.
+- **Prettier**: For consistent code formatting.
+- **Husky**: For managing pre-commit hooks to ensure code quality.
+- **Game API**: For fetching game data, including genres, details, and sorting options.
+
+---
+
+## Installation and Setup 🚀
+
+1. **Clone repository**:
+   ```bash
+   git clone https://github.com/gloriaumutoni/Game-hub.git
+   ```
+2. **Navigate through the repository**:
+
+```bash
+   cd game-hub
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. **Installing dependecies**:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+npm ci
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+4. **Start Server**:
+
+```bash
+npm run dev
 ```
