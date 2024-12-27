@@ -24,7 +24,6 @@ Game Hub is a modern web application that allows users to explore, search, and s
 - **ESLint**: For linting and maintaining code quality.
 - **Prettier**: For consistent code formatting.
 - **Husky**: For managing pre-commit hooks to ensure code quality.
-- **Game API**: For fetching game data, including genres, details, and sorting options.
 
 ---
 
