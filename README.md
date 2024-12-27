@@ -45,11 +45,11 @@ Game Hub is a modern web application that allows users to explore, search, and s
 3. **Installing dependecies**:
 
 ```bash
-npm ci
+   npm ci
 ```
 
 4. **Start Server**:
 
 ```bash
-npm run dev
+   npm run dev
 ```
