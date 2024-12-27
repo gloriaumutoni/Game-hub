@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <HStack bgColor="red.200" justifyContent="space-between" paddingX="7">
       <Image src={logo} boxSize="50px" />
-      <Switch onChange={toggleColorMode}>{colorMode}</Switch>
+      <Switch onChange={toggleColorMode}>{colorMode} Mode</Switch>
     </HStack>
   );
 }
