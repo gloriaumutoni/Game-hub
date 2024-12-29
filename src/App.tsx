@@ -17,7 +17,7 @@ export default function App() {
       <Stack hideBelow="md">
         <GridItem area="aside">Aside</GridItem>
       </Stack>
-      <GridItem area="main">
+      <GridItem area="main" justifyItems="center">
         <GameGrid />
       </GridItem>
     </Grid>
