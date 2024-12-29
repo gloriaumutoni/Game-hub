@@ -1,4 +1,4 @@
-import { Card, For, Image, SimpleGrid } from "@chakra-ui/react";
+import { Card, For, Image, SimpleGrid, Text } from "@chakra-ui/react";
 
 import useGames from "../hooks/useGames";
 
@@ -15,6 +15,9 @@ export default function GameGrid() {
               <Image src={game.background_image} />
               <Card.Body padding="0">
                 <Card.Title fontSize="2xs">{game.name}</Card.Title>
+                {game.parent_platforms.map(({ platform }) => (
+                  <Text>{platform.name}</Text>
+                ))}
               </Card.Body>
             </Card.Root>
           )}
