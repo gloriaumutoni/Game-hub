@@ -10,9 +10,6 @@ Game Hub is a modern web application that allows users to explore, search, and s
 - **Sort Games**: Sort games based on attributes like rating, release date, or popularity.
 - **Explore Genres**: Browse games by different genres such as RPG, Action, Puzzle, and more.
 - **Theme Toggle**: Switch between light and dark modes for a personalized experience.
-- **Responsive Design**: Seamlessly access the app on any device.
-- **Fast Performance**: Powered by Vite for lightning-fast builds and Chakra UI for styling.
-- **Error Handling**: Graceful error states when fetching or rendering fails.
 
 ---
 
