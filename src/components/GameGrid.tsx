@@ -1,4 +1,4 @@
-import { Card, For, Icon, Image, SimpleGrid } from "@chakra-ui/react";
+import { Card, For, Icon, Image, SimpleGrid, Stack } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import { BsGlobe } from "react-icons/bs";
 import { FaAndroid, FaPlaystation, FaWindows } from "react-icons/fa";
@@ -35,10 +35,16 @@ export default function GameGrid() {
               <Image src={game.background_image} />
               <Card.Body padding="0">
                 <Card.Title fontSize="2xs">{game.name}</Card.Title>
-                {game.parent_platforms.map(({ platform }) => (
-                  <Icon as={iconMap[platform.slug]} key={platform.id} />
-                  // <Text>{platform.name}</Text>
-                ))}
+                {game.parent_platforms.map(({ platform }) => {
+                  const PlatformIcon = iconMap[platform.slug];
+                  return (
+                    <Stack direction="row">
+                      <Icon key={platform.id} flex={"content"}>
+                        <PlatformIcon />
+                      </Icon>
+                    </Stack>
+                  );
+                })}
               </Card.Body>
             </Card.Root>
           )}
