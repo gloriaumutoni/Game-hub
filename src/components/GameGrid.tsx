@@ -1,5 +1,6 @@
 import { Card, For, HStack, Image, SimpleGrid } from "@chakra-ui/react";
 
+import getCroppedImageUrl from "../hooks/imageUrl";
 import useGames from "../hooks/useGames";
 import CriticScore from "./CriticScore";
 import PlatformIconList from "./PlatformIconList";
@@ -14,7 +15,7 @@ export default function GameGrid() {
         <For each={games}>
           {(game) => (
             <Card.Root key={game.id} width="270px" overflow="hidden">
-              <Image src={game.background_image} />
+              <Image src={getCroppedImageUrl(game.background_image)} />
               <Card.Body padding={3}>
                 <Card.Title fontSize="lg">{game.name}</Card.Title>
                 <HStack justifyContent="space-between" paddingY={2}>
