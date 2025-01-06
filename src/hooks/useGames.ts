@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 
 import apiClient from "../services/api-client";
 
-interface Platform {
+export interface Platform {
   id: number;
   slug: string;
   name: string;
 }
-interface Game {
+export interface GameProps {
   id: number;
   name: string;
   background_image: string;
@@ -17,11 +17,11 @@ interface Game {
 
 interface GamesResponseProps {
   count: number;
-  results: Game[];
+  results: GameProps[];
 }
 
 export default function useGames() {
-  const [games, setGames] = useState<Game[]>([]);
+  const [games, setGames] = useState<GameProps[]>([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
