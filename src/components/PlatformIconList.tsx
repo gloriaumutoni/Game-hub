@@ -26,6 +26,7 @@ export default function PlatformIconList({ platform }: PlatformIconProps) {
     ios: MdPhoneIphone,
     web: BsGlobe,
   };
+
   return (
     <HStack>
       {platform.map((platform) => {

@@ -1,6 +1,7 @@
-import { Card, For, Image, SimpleGrid } from "@chakra-ui/react";
+import { Card, For, HStack, Image, SimpleGrid } from "@chakra-ui/react";
 
 import useGames from "../hooks/useGames";
+import CriticScore from "./CriticScore";
 import PlatformIconList from "./PlatformIconList";
 
 export default function GameGrid() {
@@ -9,18 +10,21 @@ export default function GameGrid() {
   return (
     <>
       {error && <p>{error}</p>}
-      <SimpleGrid columns={{ sm: 1, md: 3, lg: 3, xl: 5 }} gap={6}>
+      <SimpleGrid paddingY={4} columns={{ sm: 1, md: 3, lg: 3, xl: 4 }} gap={6}>
         <For each={games}>
           {(game) => (
-            <Card.Root key={game.id} width="220px" overflow="hidden">
+            <Card.Root key={game.id} width="270px" overflow="hidden">
               <Image src={game.background_image} />
-              <Card.Body padding="0">
-                <Card.Title fontSize="2xs">{game.name}</Card.Title>
-                <PlatformIconList
-                  platform={game.parent_platforms.map(
-                    (platform) => platform.platform,
-                  )}
-                />
+              <Card.Body padding={3}>
+                <Card.Title fontSize="lg">{game.name}</Card.Title>
+                <HStack justifyContent="space-between" paddingY={2}>
+                  <PlatformIconList
+                    platform={game.parent_platforms.map(
+                      (platform) => platform.platform,
+                    )}
+                  />
+                  <CriticScore score={game.metacritic} />
+                </HStack>
               </Card.Body>
             </Card.Root>
           )}
