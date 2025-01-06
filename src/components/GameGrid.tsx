@@ -3,15 +3,21 @@ import { Card, For, HStack, Image, SimpleGrid } from "@chakra-ui/react";
 import getCroppedImageUrl from "../hooks/imageUrl";
 import useGames from "../hooks/useGames";
 import CriticScore from "./CriticScore";
+import GameCardSkeleton from "./GameCardSkeleton";
 import PlatformIconList from "./PlatformIconList";
 
 export default function GameGrid() {
-  const { games, error } = useGames();
+  const { games, error, isLoading } = useGames();
+  const skeletons = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  ];
 
   return (
     <>
       {error && <p>{error}</p>}
       <SimpleGrid paddingY={4} columns={{ sm: 1, md: 3, lg: 3, xl: 4 }} gap={6}>
+        {isLoading &&
+          skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
         <For each={games}>
           {(game) => (
             <Card.Root key={game.id} width="270px" overflow="hidden">
