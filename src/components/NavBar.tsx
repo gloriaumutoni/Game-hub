@@ -8,12 +8,7 @@ export default function NavBar() {
   const { toggleColorMode, colorMode } = useColorMode();
 
   return (
-    <HStack
-      bgColor="black"
-      justifyContent="space-between"
-      paddingX="7"
-      paddingY="3"
-    >
+    <HStack justifyContent="space-between" paddingX="7" paddingY="3">
       <Image src={logo} boxSize="50px" />
       <Switch onChange={toggleColorMode}>{colorMode} Mode</Switch>
     </HStack>
