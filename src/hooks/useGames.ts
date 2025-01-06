@@ -2,24 +2,7 @@ import { CanceledError } from "axios";
 import { useEffect, useState } from "react";
 
 import apiClient from "../services/api-client";
-
-export interface Platform {
-  id: number;
-  slug: string;
-  name: string;
-}
-export interface GameProps {
-  id: number;
-  name: string;
-  background_image: string;
-  parent_platforms: { platform: Platform }[];
-  metacritic: number;
-}
-
-interface GamesResponseProps {
-  count: number;
-  results: GameProps[];
-}
+import { GameProps, GamesResponseProps } from "../util/api";
 
 export default function useGames() {
   const [games, setGames] = useState<GameProps[]>([]);
