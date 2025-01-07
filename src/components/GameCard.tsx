@@ -11,7 +11,7 @@ interface Props {
 
 export default function GameCard({ game }: Props) {
   return (
-    <Card.Root key={game.id}>
+    <Card.Root key={game.id} overflow={"hidden"}>
       <Image src={getCroppedImageUrl(game.background_image)} />
       <Card.Body padding={3}>
         <Card.Title fontSize="lg">{game.name}</Card.Title>
