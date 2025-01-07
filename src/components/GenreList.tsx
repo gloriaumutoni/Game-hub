@@ -4,8 +4,9 @@ import getCroppedImageUrl from "../hooks/imageUrl";
 import useGenre from "../hooks/useGenre";
 
 export default function GenreList() {
-  const { data, isLoading } = useGenre();
+  const { data, isLoading, error } = useGenre();
 
+  if (error) return null;
   if (isLoading) return <Spinner />;
 
   return (
