@@ -10,15 +10,14 @@ export interface GameProps {
   parent_platforms: { platform: Platform }[];
   metacritic: number;
 }
+export interface GenreProps {
+  id: number;
+  name: string;
+}
 
 export interface GamesResponseProps {
   count: number;
   results: GameProps[];
-}
-
-export interface GenreProps {
-  id: number;
-  name: string;
 }
 
 export interface FetchGenreResponse {
