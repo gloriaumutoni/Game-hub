@@ -14,13 +14,3 @@ export interface GenreProps {
   id: number;
   name: string;
 }
-
-export interface GamesResponseProps {
-  count: number;
-  results: GameProps[];
-}
-
-export interface FetchGenreResponse {
-  count: number;
-  results: GenreProps[];
-}
