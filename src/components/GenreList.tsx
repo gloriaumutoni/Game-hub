@@ -6,9 +6,10 @@ import { GenreProps } from "../util/api";
 
 interface Props {
   onSelectGenre: (genre: GenreProps) => void;
+  selectedGenre: GenreProps | null;
 }
 
-export default function GenreList({ onSelectGenre }: Props) {
+export default function GenreList({ selectedGenre, onSelectGenre }: Props) {
   const { data, isLoading, error } = useGenre();
 
   if (error) return null;
@@ -29,6 +30,7 @@ export default function GenreList({ onSelectGenre }: Props) {
             <Button
               fontSize="lg"
               variant="plain"
+              fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
               onClick={() => onSelectGenre(genre)}
             >
               {genre.name}

@@ -25,7 +25,10 @@ export default function App() {
       </GridItem>
       <Stack hideBelow="md">
         <GridItem area="aside" paddingX={7}>
-          <GenreList onSelectGenre={(genre) => setSelectedGenre(genre)} />
+          <GenreList
+            selectedGenre={selectedGenre}
+            onSelectGenre={(genre) => setSelectedGenre(genre)}
+          />
         </GridItem>
       </Stack>
       <GridItem area="main" justifyItems="center">
