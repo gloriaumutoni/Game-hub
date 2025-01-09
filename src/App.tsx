@@ -5,10 +5,13 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import NavBar from "./components/NavBar";
 import PlatformSelector from "./components/PlatformSelector";
-import { GenreProps } from "./util/api";
+import { GenreProps, Platform } from "./util/api";
 
 export default function App() {
   const [selectedGenre, setSelectedGenre] = useState<GenreProps | null>(null);
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
+    null,
+  );
 
   return (
     <Grid
@@ -18,7 +21,7 @@ export default function App() {
       }}
       templateColumns={{
         base: "1fr",
-        lg: "200px 1fr",
+        lg: "240px 1fr",
       }}
     >
       <GridItem area="nav">
@@ -32,9 +35,15 @@ export default function App() {
           />
         </GridItem>
       </Stack>
-      <GridItem area="main" justifyItems="">
-        <PlatformSelector />
-        <GameGrid selectedGenre={selectedGenre} />
+      <GridItem area="main" justifyItems="center">
+        <PlatformSelector
+          selectedPlatform={selectedPlatform}
+          onSelectPlatform={(platform) => setSelectedPlatform(platform)}
+        />
+        <GameGrid
+          selectedPlatform={selectedPlatform}
+          selectedGenre={selectedGenre}
+        />
       </GridItem>
     </Grid>
   );
