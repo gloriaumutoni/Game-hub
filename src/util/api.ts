@@ -15,3 +15,8 @@ export interface GenreProps {
   name: string;
   image_background: string;
 }
+
+export interface GameQuery {
+  genre: GenreProps | null;
+  platform: Platform | null;
+}
