@@ -1,15 +1,15 @@
-import { GameProps, GenreProps, Platform } from "./../util/api";
+import { GameProps, GameQuery } from "./../util/api";
 import useData from "./useData";
 
-export default function useGames(
-  selectedGenre: GenreProps | null,
-  selectedPlatform: Platform | null,
-) {
+export default function useGames(gameQuery: GameQuery) {
   return useData<GameProps>(
     "/games",
     {
-      params: { genres: selectedGenre?.id, platforms: selectedPlatform?.id },
+      params: {
+        genres: gameQuery.genre?.id,
+        platforms: gameQuery.platform?.id,
+      },
     },
-    [selectedGenre?.id, selectedPlatform?.id],
+    [gameQuery],
   );
 }

@@ -39,10 +39,7 @@ export default function App() {
             setGameQuery({ ...gameQuery, platform })
           }
         />
-        <GameGrid
-          selectedPlatform={gameQuery.platform}
-          selectedGenre={gameQuery.genre}
-        />
+        <GameGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>
   );
