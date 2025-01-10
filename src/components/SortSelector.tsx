@@ -28,7 +28,7 @@ export default function SortSelector({ onSelectOrder, sortOrder }: Props) {
 
   return (
     <MenuRoot>
-      <MenuTrigger margin={4} asChild>
+      <MenuTrigger asChild>
         <Button variant="outline" size="sm">
           Order by: {currentSortOrder?.label || "Relevance"} <BsChevronDown />
         </Button>
