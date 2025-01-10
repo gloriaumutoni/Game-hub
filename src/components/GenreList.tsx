@@ -18,7 +18,7 @@ export default function GenreList({ selectedGenre, onSelectGenre }: Props) {
   return (
     <List.Root>
       {data.map((genre) => (
-        <List.Item key={genre.id}>
+        <List.Item key={genre.id} listStyleType="none">
           <HStack>
             <Image
               boxSize="32px"

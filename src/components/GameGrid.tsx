@@ -19,7 +19,7 @@ export default function GameGrid({ gameQuery }: Props) {
   return (
     <>
       {error && <p>{error}</p>}
-      <SimpleGrid paddingY={4} columns={{ sm: 1, md: 3, lg: 3, xl: 4 }} gap={6}>
+      <SimpleGrid padding={4} columns={{ sm: 1, md: 3, lg: 3, xl: 4 }} gap={6}>
         {isLoading &&
           skeletons.map((skeleton) => (
             <GameCardContainer key={skeleton}>
