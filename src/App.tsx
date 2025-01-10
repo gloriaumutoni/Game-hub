@@ -32,7 +32,7 @@ export default function App() {
           />
         </GridItem>
       </Stack>
-      <GridItem area="main" justifyItems="center">
+      <GridItem area="main">
         <PlatformSelector
           selectedPlatform={gameQuery.platform}
           onSelectPlatform={(platform) =>
