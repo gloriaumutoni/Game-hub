@@ -24,7 +24,7 @@ export default function PlatformSelector({
 
   return (
     <MenuRoot>
-      <MenuTrigger asChild>
+      <MenuTrigger margin={4} asChild>
         <Button variant="outline" size="sm">
           {selectedPlatform?.name || "Platforms"}
         </Button>
