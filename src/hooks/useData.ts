@@ -15,11 +15,12 @@ export default function useData<T>(
 ) {
   const [data, setData] = useState<T[]>([]);
   const [error, setError] = useState("");
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(
     () => {
       const controller = new AbortController();
+      setLoading(true);
       apiClient
         .get<FetchResponse<T>>(endpoint, {
           signal: controller.signal,
