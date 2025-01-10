@@ -5,7 +5,7 @@ import {
   MenuRoot,
   MenuTrigger,
 } from "@/components/ui/menu";
-import { BsChevronBarDown, BsChevronDown } from "react-icons/bs";
+import { BsChevronDown } from "react-icons/bs";
 
 import usePlatforms from "../hooks/usePlatforms";
 import { Platform } from "../util/api";
@@ -25,7 +25,7 @@ export default function PlatformSelector({
 
   return (
     <MenuRoot>
-      <MenuTrigger margin={4} asChild>
+      <MenuTrigger asChild>
         <Button variant="outline" size="sm">
           {selectedPlatform?.name || "Platforms"} <BsChevronDown />
         </Button>
