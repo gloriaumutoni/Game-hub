@@ -30,7 +30,7 @@ export default function GenreList({ selectedGenre, onSelectGenre }: Props) {
       <List.Root gap={2}>
         {data.map((genre) => (
           <List.Item key={genre.id} listStyleType="none">
-            <HStack>
+            <HStack gap={0}>
               <Image
                 boxSize="38px"
                 borderRadius={8}
