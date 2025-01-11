@@ -1,6 +1,5 @@
-import { GenreProps } from "../util/api";
-import useData from "./useData";
+import genre from "../data/genre";
 
 export default function useGenre() {
-  return useData<GenreProps>("/genres");
+  return { data: genre, isLoading: false, error: null };
 }
