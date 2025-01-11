@@ -12,7 +12,9 @@ export default function NavBar() {
     <HStack justifyContent="space-between" paddingX="7" paddingY="3">
       <Image src={logo} boxSize="50px" />
       <SearchInput />
-      <Switch onChange={toggleColorMode}>{colorMode} Mode</Switch>
+      <Switch whiteSpace="nowrap" onChange={toggleColorMode}>
+        {colorMode} Mode
+      </Switch>
     </HStack>
   );
 }
