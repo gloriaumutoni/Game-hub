@@ -5,13 +5,17 @@ import logo from "../assets/logo.webp";
 import SearchInput from "./SearchInput";
 import { useColorMode } from "./ui/color-mode";
 
-export default function NavBar() {
+interface Props {
+  onSearch: (searchText: string) => void;
+}
+
+export default function NavBar({ onSearch }: Props) {
   const { toggleColorMode, colorMode } = useColorMode();
 
   return (
-    <HStack justifyContent="space-between" paddingX="7" paddingY="3">
+    <HStack paddingX="7" paddingY="3">
       <Image src={logo} boxSize="50px" />
-      <SearchInput />
+      <SearchInput onSearch={onSearch} />
       <Switch whiteSpace="nowrap" onChange={toggleColorMode}>
         {colorMode} Mode
       </Switch>

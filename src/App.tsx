@@ -23,7 +23,9 @@ export default function App() {
       }}
     >
       <GridItem area="nav">
-        <NavBar />
+        <NavBar
+          onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
+        />
       </GridItem>
       <Stack hideBelow="md">
         <GridItem area="aside" paddingX={7}>
