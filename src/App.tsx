@@ -37,7 +37,7 @@ export default function App() {
         </GridItem>
       </Stack>
       <GridItem area="main">
-        <Box marginLeft={5}>
+        <Box marginLeft={4}>
           <GameHeading gameQuery={gameQuery} />
           <Flex gap={5}>
             <PlatformSelector
