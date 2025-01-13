@@ -49,3 +49,8 @@ Game Hub is a modern web application that allows users to explore, search, and s
 ```bash
    npm run dev
 ```
+
+## Deployed Application 🌐
+
+You can explore the live application here:  
+[Game Hub on Vercel](https://game-pqgj3mw9m-game-hubs-projects.vercel.app/)
