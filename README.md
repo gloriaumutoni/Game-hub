@@ -1,7 +1,6 @@
 # Game Hub 🎮
 
-Game Hub is a modern web application that allows users to explore, search, and sort games based on genres and other attributes. The app provides an intuitive user interface and responsive design, making it easy to navigate and discover games. Built with React, Vite, and Chakra UI, it ensures fast performance and great user experience.
-
+Game Hub, your go-to mini video game discovery platform for finding new and exciting games to play. Whether you're a casual gamer or a seasoned enthusiast, Game Hub is designed to enhance your gaming discovery experience with its user-friendly features and sleek interface.
 ---
 
 ## Features ✨
