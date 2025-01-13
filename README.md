@@ -1,6 +1,7 @@
 # Game Hub 🎮
 
 Game Hub, your go-to mini video game discovery platform for finding new and exciting games to play. Whether you're a casual gamer or a seasoned enthusiast, Game Hub is designed to enhance your gaming discovery experience with its user-friendly features and sleek interface.
+
 ---
 
 ## Features ✨
