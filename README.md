@@ -53,4 +53,4 @@ Game Hub is a modern web application that allows users to explore, search, and s
 ## Deployed Application 🌐
 
 You can explore the live application here:  
-[Game Hub on Vercel](https://game-pqgj3mw9m-game-hubs-projects.vercel.app/)
+[Game Hub](https://game-pqgj3mw9m-game-hubs-projects.vercel.app/)
